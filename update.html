@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3u1D/AqKzz2S/JWX2E+8BSVcE2Nnz92bTvajEpJ+dV3tV4n6VCVvThm8oqSbMCtr+UZPvXQ5Z6KktnsOJM89Rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #007bff 0%, #00d2d3 100%);
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        
+        header nav ul li {
+            margin: 0 20px;
+        }
+        
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        header nav ul li a:hover {
+            color: #ffdd57;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 100px auto 20px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+        }
+        
+        .container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-align: center;
+        }
+        
+        .container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container label {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .container input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .container button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 14px 25px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .container button:hover {
+            background-color: #0056b3;
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            clear: both;
+        }
+        
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+    </style>
+    <title>Update Item</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/update">Update</a></li>
+            </ul>
+        </nav>
+    </header>  
+
+    <main>
+        <section>
+            <div class="container">
+                <h2>Update Item</h2>
+                <form action="/update" method="post">
+                    <label for="updateName">Name of Item to Update:</label>
+                    <input type="text" id="updateName" name="name" required>
+                    <label for="updateDescription">New Email:</label>
+                    <input type="text" id="updateDescription" name="mailid" required>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
